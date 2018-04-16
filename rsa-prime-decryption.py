@@ -82,7 +82,8 @@ def main():
     c =  args.c
     decrypted_cipher = hex(decrypt_rsa(p,q,dp,dq,c))[2:]
     plaintext = decode_plaintext(decrypted_cipher)
-    print(str(plaintext))
+    print("Decrypted ciphertext: " + str(decrypted_cipher).strip("L"))
+    print("Plaintext: " + str(plaintext))
     pass
 
 if __name__=='__main__':
